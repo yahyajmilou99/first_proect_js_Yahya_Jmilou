@@ -23,15 +23,15 @@
             <!-- - After each space, the first letter should remain capitalized. -->
             <!-- - Check that all other characters are in lowercase. -->
             <!-- - Do not save the Name if it has less than 5 characters (excluding spaces). -->
-            <!--! - Do not save the Name if it contains numbers, "@", or similar special characters. -->
+            <!-- - Do not save the Name if it contains numbers, "@", or similar special characters. -->
 
             # Email:
             <!-- - Check for leading or trailing spaces. -->
-            - Convert all letters to lowercase.
-            - Do not save the Email if it has spaces in the middle.
-            - Do not save the Email if it has fewer than 10 characters (excluding spaces).
-            - Do not save the Email if it does not contain exactly one "@" symbol.
-            - Ensure the email is unique.
+            <!-- - Convert all letters to lowercase. -->
+            <!--! - Do not save the Email if it has spaces in the middle. -->
+            <!--! - Do not save the Email if it has fewer than 10 characters (excluding spaces). -->
+            <!--! - Do not save the Email if it does not contain exactly one "@" symbol. -->
+            <!-- - Ensure the email is unique. -->
 
             # Age:
             - Check for leading, trailing, or middle spaces.

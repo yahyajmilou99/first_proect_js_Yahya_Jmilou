@@ -8,10 +8,6 @@ class Database {
         this.capital = capital
         this.clients = clients
     }
-    check() {
-        let searchIf = Object.values(database.clients[index])
-        let findIf = searchIf.find(element => element == this.clients.)
-    }
 }
 
 let database = new Database(`database`, 1000000,
@@ -23,9 +19,10 @@ let database = new Database(`database`, 1000000,
 // ^ Name
 
 class User {
-    constructor(name, email, password, money) {
+    constructor(name, email, age, password, money) {
         this.name = name
         this.email = email
+        this.age = age
         this.password = password
         this.money = money
     }
@@ -42,15 +39,14 @@ let userName = getName.split(` `).map(word => {
 }).join(` `)
 
 
-// ! has to be solved
-// let specialChars =/[`!@#$%^&*()_\-+=\[\]{};':"\\|,.<>\/?~]/
+let specialChars =/[`!@#$%^&*()_\-+=\[\]{};':"\\|,.<>\/?~]/
+let numbers = /[0-9]/
 
-// let numbers = /[0-9]/
+if (specialChars.test(userName) == true || numbers.test(userName) == true){
+    alert(`no special caracters needed , please refresh the page to try again`)
+}
 
-// while (specialChars.test(userName) == 1 && numbers.test(userName) == 1) {
-//     getName = prompt(`no special chacters or numbers , enter your full name`).trim()
-// }
-// ! has to be solved
+// ^ Email
 
 let getEmail = prompt(`enter your mail`)
 
@@ -58,12 +54,20 @@ let userEmail = getEmail.toLowerCase().replace(/\s/g, '')
 
 // * cheeking if we already have the same email in database
 
-// for (let index = 0; index < database.clients.length; index++) {
-//     const element = database.clients[index];
-//     let searchIf = Object.values(database.clients[index])
-//     let findIf = searchIf.find(element => element == `yahyajmilou@gmail.com`)
-// }
+const dataSearch = (index) => {
+    let getSignedEmail = Object.values(database.clients[index])
+    let findSignedEmail = getSignedEmail[2]
+    if (userEmail == findSignedEmail) {
+        alert(`this email is already signed up , refresh the page to login`)
+    }else{
 
-console.log(checkdata);
+    }
 
-// console.log(userEmail);
+}
+
+for (let index = 0; index < database.clients.length; index++) {
+    const element = database.clients[index];
+    dataSearch(index)
+}
+
+
