@@ -8,6 +8,10 @@ class Database {
         this.capital = capital
         this.clients = clients
     }
+    check() {
+        let searchIf = Object.values(database.clients[index])
+        let findIf = searchIf.find(element => element == this.clients.)
+    }
 }
 
 let database = new Database(`database`, 1000000,
@@ -48,3 +52,18 @@ let userName = getName.split(` `).map(word => {
 // }
 // ! has to be solved
 
+let getEmail = prompt(`enter your mail`)
+
+let userEmail = getEmail.toLowerCase().replace(/\s/g, '')
+
+// * cheeking if we already have the same email in database
+
+// for (let index = 0; index < database.clients.length; index++) {
+//     const element = database.clients[index];
+//     let searchIf = Object.values(database.clients[index])
+//     let findIf = searchIf.find(element => element == `yahyajmilou@gmail.com`)
+// }
+
+console.log(checkdata);
+
+// console.log(userEmail);
