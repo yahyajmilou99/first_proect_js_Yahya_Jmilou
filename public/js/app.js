@@ -11,7 +11,7 @@ class Database {
 }
 
 let database = new Database(`database`, 1000000,
-    [{ name: `Yahya`, money: 10000, email: `yahyajmilou@gmail.com`, password: `qwerty123` }
+    [{ name: `Yahya`, email: `yahyajmilou@gmail.com`, age: 18 ,password: `qwerty123`, money: 10000 }
     ]);
 
 // ! Account Creation
@@ -71,3 +71,39 @@ for (let index = 0; index < database.clients.length; index++) {
 }
 
 
+// ^ Age 
+
+
+
+let getAge = parseInt(prompt(`enter you age`).trim().replace(/\s/g, ''))
+let isnum = /^\d+$/.test(getAge);
+
+if (isnum == false) {
+    alert(`only numbers are accepted`)
+}
+if (getAge > 99) {
+    alert(`invalid input`)
+}
+
+
+
+// ^ PassWord
+
+let getPassword = prompt(`enter password`)
+
+
+// class User {
+//     constructor(name, email, age, password, money) {
+//         this.name = name
+//         this.email = email
+//         this.age = age
+//         this.password = password
+//         this.money = money
+//     }
+// }
+
+let client = new User(userName,userEmail,getAge,getPassword,2000);
+
+database.clients.push(client)
+
+console.log(database);
